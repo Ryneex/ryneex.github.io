@@ -1,5 +1,24 @@
-const a = [0,1,2,3,4,5,6,7,8,9]
+let spani = document.querySelectorAll('spani')
 
-a.forEach(x =>{
-    console.log(`I am Sad ${x}`)
-})
+bars.onclick = () => {
+    if (side_nav.style.width == '200px' || side_nav.style.width == '') {
+
+        side_nav.style = 'width:45px;min-width:45px;'
+
+        spani.forEach(span => {
+            setTimeout(() => {
+                span.style.display = 'none'
+                }, 50);
+        });
+
+    } else {
+
+        side_nav.style = 'width:200px;min-width:200px;'
+
+        spani.forEach(span => {
+            setTimeout(() => {
+            span.style.display = 'block'
+            }, 100);
+        });
+    }
+};
